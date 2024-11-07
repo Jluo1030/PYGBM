@@ -1,6 +1,6 @@
 import numpy as np
 
-Class GBMSimulator:
+class GBMSimulator:
 
     def __init__(self, y_0, mu, sigma):
         self.y_0 = y_0
@@ -14,7 +14,7 @@ Class GBMSimulator:
         y[0][0] = self.y_0
 
         for i in range(1,N):
-            y[0][i] = y[0][i-1] * (1 + self.miu * time_interval + self.sigma * np.random.normal(0, time_interval, 1))
+            y[0][i] = y[0][i-1] * (1 + self.mu * time_interval + self.sigma * np.random.normal(0, time_interval, 1))
         
         return t,y
     
