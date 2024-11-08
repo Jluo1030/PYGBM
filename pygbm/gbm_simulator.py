@@ -7,7 +7,7 @@ class GBMSimulator:
         self.mu = mu
         self.sigma = sigma
 
-    def simulate_path(T, N):
+    def simulate_path(self,T, N):
         t = np.linspace(0,T,N)
         y = np.zeros([1,N])
         time_interval = T/N
@@ -17,4 +17,3 @@ class GBMSimulator:
             y[0][i] = y[0][i-1] * (1 + self.mu * time_interval + self.sigma * np.random.normal(0, time_interval, 1))
         
         return t,y
-    

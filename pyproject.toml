@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]  # Build requirements
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygbm"
+dynamic = ["version"]
+description = "A Python package for simulating Geometric Brownian motions"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Jingyi Luo", email = "your.email@example.com" },
+]
+keywords = ["Brownian Motions", "math", "technology"]
+
+# Runtime dependencies
+dependencies = [
+    "numpy",
+    "argparse"
+]
+
+[project.urls]
+"Source" = "https://github.com/Jluo1030/PYGBM"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+
+[project.scripts]
+company = "company.cli:main"
